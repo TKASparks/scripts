@@ -56,4 +56,4 @@ if (prompt_yn("Do you want to move a file?")){
         move ($file, $dest) || die "\nThe file or destination does not exist.\n";
         print "The file was moved successfully.\n";
 }
-#Aftr making the final subroutine and cleaning this code up a bit more a menu function should be added to mae it more user friendly
+#Aftr making the final subroutine and cleaning this code up a bit more a menu function should be added to make it more user friendly
