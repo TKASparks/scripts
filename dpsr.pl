@@ -32,14 +32,18 @@ chomp(my $mchoice = <STDIN>);
 		system(clear);
 		my $cmd = "grep 'Only in' $choice";;
 		print("=======================================================================\n");
+		print("\n");
 		print(system("$cmd"));
+		print("\n");
 		print("=======================================================================\n");
 		}
 	elsif($mchoice eq '2'){
 		system(clear);
 		my $cmd2 = "grep 'differ' $choice";
 		print("=======================================================================\n");
+		print("\n");
 		print(system("$cmd2"));
+		print("\n");
 		print("=======================================================================\n");
 			sub diffthis {
 				my ($question) = @_;
@@ -56,8 +60,12 @@ chomp(my $mchoice = <STDIN>);
 			if (diffthis_yn("Do you want to diff files between branches?")){
 				my $d1 = diffthis("Enter the path to your first file: ");
 				my $d2 = diffthis("Enter the path to your second file: ");
-				my $cmd3 = "diff -qr $d1 $d2";
+				my $cmd3 = "diff $d1 $d2";
+				print("=======================================================================\n");
+				print("\n");	
 				print(system("$cmd3"));
+				print("\n");
+				print("=======================================================================\n");
 				}
 			}
 	elsif($mchoice eq '3'){
